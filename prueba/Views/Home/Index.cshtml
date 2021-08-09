@@ -7,10 +7,33 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>*@
 
+@* <script src="~/lib/jquery/dist/jquery.js"></script>  *@
+@* <script> *@
+@* $(document).ready(function(){ *@
+@*   $("p").click(function(){ *@
+@*     alert("The paragraph was clicked."); *@
+@*   }); *@
+@* }); *@
+@* </script> *@
+@* <p>Click on this.</p> *@
+
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <button class="btnPdf">Generar Pdf</button>
 <script type="text/javascript">
-    $("#btnPdf").click(function () {
-        window.open('../Home/PrintStudent?param=1','_blank')
-    });
+$(document).ready(function(){
+  $("button").click(function () {
+          window.open("../Home/PrintStudent?param=1","_blank")
+          // window.open('https://www.freecodecamp.org/','fCC_WindowName')
+          // alert( "Handler for .click() called." );
+      });
+});
 </script>
+
+@* <script src="~/lib/jquery/dist/jquery.js"></script> *@
+@* <button class="btnPdf">Generar Pdf</button> *@
+@* <script> *@
+@*   $(document).ready(function () { *@
+@*     alert("Test");  *@
+@*   }); *@
+@* </script> *@
+

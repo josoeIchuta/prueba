@@ -91,7 +91,7 @@ namespace prueba.Reports
 
             string path = _oHostEnvironment.WebRootPath + "/Image";
 
-            string imgCombine = Path.Combine(path, "logo.png");
+            string imgCombine = Path.Combine(path, "umsa.png");
             Image img = Image.GetInstance(imgCombine);
 
             _pdfCell = new PdfPCell(img);
@@ -112,7 +112,7 @@ namespace prueba.Reports
             PdfPTable pdfPTable = new PdfPTable(maxColumn);
 
             _fontStyle = FontFactory.GetFont("Tahoma", 18f, 1);
-            _pdfCell = new PdfPCell(new Phrase("Student Information", _fontStyle));
+            _pdfCell = new PdfPCell(new Phrase("Informacion de Estudiantes", _fontStyle));
             _pdfCell.Colspan = maxColumn;
             _pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
             _pdfCell.Border = 0;
@@ -121,7 +121,7 @@ namespace prueba.Reports
             pdfPTable.CompleteRow();
 
             _fontStyle = FontFactory.GetFont("Tahoma", 14f, 1);
-            _pdfCell = new PdfPCell(new Phrase("School Name", _fontStyle));
+            _pdfCell = new PdfPCell(new Phrase("Direccion del Estudiante", _fontStyle));
             _pdfCell.Colspan = maxColumn;
             _pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
             _pdfCell.Border = 0;
@@ -157,13 +157,13 @@ namespace prueba.Reports
             _pdfCell.BackgroundColor = BaseColor.Gray;
             _pdfTable.AddCell(_pdfCell);
 
-            _pdfCell = new PdfPCell(new Phrase("Name", fontStyleBold));
+            _pdfCell = new PdfPCell(new Phrase("Nombre", fontStyleBold));
             _pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
             _pdfCell.VerticalAlignment = Element.ALIGN_MIDDLE;
             _pdfCell.BackgroundColor = BaseColor.Gray;
             _pdfTable.AddCell(_pdfCell);
 
-            _pdfCell = new PdfPCell(new Phrase("Address", fontStyleBold));
+            _pdfCell = new PdfPCell(new Phrase("Direccion", fontStyleBold));
             _pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
             _pdfCell.VerticalAlignment = Element.ALIGN_MIDDLE;
             _pdfCell.BackgroundColor = BaseColor.Gray;

@@ -31,10 +31,10 @@ namespace prueba.Controllers
             return View();
         }
 
-        //public IActionResult Privacy()
-        //{
-        //    return View();
-        //}
+        public IActionResult Privacy()
+        {
+            return View();
+        }
 
         //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         //public IActionResult Error()
@@ -42,7 +42,7 @@ namespace prueba.Controllers
         //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         //}
 
-        public AcceptedResult PrintStudent(int param)
+        public FileContentResult PrintStudent(int param)
         {
             List<Student> oStudents = new List<Student>();
             for(int i = 1; i <= 10; i++)
