@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome Prueba</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<button class="btnPdf">Generar Pdf</button>
+<script type="text/javascript">
+    $("#btnPdf").click(function () {
+        window.open('../Home/PrintStudent?param=1','_blank')
+    });
+</script>
